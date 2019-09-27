@@ -15,22 +15,27 @@ def is_empty(string, property):
 
 
 def unpark():
-    number = input('Enter the vehicle number  ')
+    number = input('Enter the vehicle number to unpark : ')
     is_empty(number, 'number')
 
     try:
         parking = Parking.objects.get(car_number=number)
-        print(parking)
+        print('**************************************')
         if parking.is_parked:
             parking.is_parked = False
             print('car number {} successfully unparked'.format(number))
         else:
             print('car number {} is not parked'.format(number))
+            return unpark()
+        print('**************************************')
         parking.save()
 
 
     except ObjectDoesNotExist:
+        print('**************************************')
         print('car number {} is not parked'.format(number))
+        print('**************************************')
+        return unpark()
 
     management.call_command('parking')
 

@@ -13,19 +13,17 @@ def update_blog():
     task = True
     while task:
 
-        action = input('please type the name of action you want to perform ')
+        action = input('please type the name of action you want to perform :')
         if action in content:
             management.call_command(action)
         else:
             a = input('unavailable action please type 1 to try again or any other key  to leave ')
-            if a == '1':
-                task = True
-            else:
-
+            if a != '1':
                 print('thanks of using the service')
                 task = False
                 return 'good bye'
-    # management.call_command('park')
+            else:
+                task = True
 
 
 class Command(BaseCommand):
