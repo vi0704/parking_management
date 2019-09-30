@@ -20,3 +20,6 @@ create a superuser with "python manage.py createsuperuser"
 
 
 Run management command "python manage.py parking" for further actions.
+
+
+PS:- Car number validation is limited to alphanumeric only and car colour validation is limited to alphabets only.
