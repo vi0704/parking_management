@@ -10,20 +10,15 @@ def update_blog():
     print('Here is the list of all available actions')
     content = [x.strip() for x in content]
     print(content)
-    task = True
-    while task:
+    # task = True
+    # while task:
 
-        action = input('please type the name of action you want to perform :')
-        if action in content:
-            management.call_command(action)
-        else:
-            a = input('unavailable action please type 1 to try again or any other key  to leave ')
-            if a != '1':
-                print('thanks of using the service')
-                task = False
-                return 'good bye'
-            else:
-                task = True
+    action = input('please type the name of action you want to perform :')
+    if action in content:
+        management.call_command(action)
+    else:
+        print('unavailable action please select from the given option or ctrl+c to exit')
+        update_blog()
 
 
 class Command(BaseCommand):
