@@ -1,37 +1,25 @@
-Welcome to parking management console
+PARKING MANAGEMENT
 
-You can use the [editor on GitHub](https://github.com/vi0704/parking_management/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Installation process:-
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Navigate to you projects folder.
 
-### Markdown
+clone the repository with "git clone https://github.com/vi0704/parking_management.git"
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Navigate to parking_management project
 
-```markdown
-Syntax highlighted code block
+create you virtualenv and activate it.
 
-# Header 1
-## Header 2
-### Header 3
+install the reqiuirements with "pip install -r requirements.txt"
 
-- Bulleted
-- List
+navigate to app folder with "cd apps".
 
-1. Numbered
-2. List
+Migrate with "python manage.py migrate"
 
-**Bold** and _Italic_ and `Code` text
+create a superuser with "python manage.py createsuperuser"
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Run management command "python manage.py parking" for further actions.
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/vi0704/parking_management/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+PS:- Car number validation is limited to alphanumeric only and car colour validation is limited to alphabets only.
