@@ -7,4 +7,7 @@ class Parking(models.Model):
     is_parked = models.BooleanField(default=False)
     last_entry = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return (self.car_number)
+
 

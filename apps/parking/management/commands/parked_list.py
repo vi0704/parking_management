@@ -3,15 +3,6 @@ from django.core import management
 from parking.models import Parking
 
 
-def is_empty(string, property):
-    if string and string.strip():
-        pass
-    else:
-        print('Invalid entry provide some valid input')
-        colour = input('Enter the {} of vechicle'.format(property))
-        return is_empty(colour, property)
-
-
 def parked_list():
     list = Parking.objects.filter(is_parked=True)
     print('************* parked vehicles ***************')
